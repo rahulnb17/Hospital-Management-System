@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Staff Dashboard</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <h2>Staff Dashboard</h2>
+
+    <h3>Add New Staff Member</h3>
+    <input type="text" id="staffName" placeholder="Staff Name" />
+    <input type="text" id="staffRole" placeholder="Role (e.g., Nurse, Admin)" />
+    <input type="text" id="staffUsername" placeholder="Username" />
+    <input type="password" id="staffPassword" placeholder="Password" />
+    <button onclick="addStaff()">Add Staff</button>
+
+    <ul id="confirmation"></ul>
+  </div>
+
+  <script src="../public/scripts/staff.js"></script>
+</body>
+</html>

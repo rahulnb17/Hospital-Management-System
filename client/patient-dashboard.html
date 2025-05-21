@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <h2>Patient Dashboard</h2>
+
+    <h3>Register New Patient</h3>
+    <input type="text" id="patientName" placeholder="Full Name" />
+    <input type="text" id="patientUsername" placeholder="Username" />
+    <input type="password" id="patientPassword" placeholder="Password" />
+    
+    <button onclick="addPatient()">Register Patient</button>
+
+    <ul id="confirmation"></ul>
+  </div>
+
+  <script src="../public/scripts/patient.js"></script>
+</body>
+</html>

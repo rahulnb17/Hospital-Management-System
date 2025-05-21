@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login As</h2>
+    
+    <!-- Role-based Login -->
+    <button onclick="loginAs('patient')">Login as Patient</button>
+    <button onclick="loginAs('doctor')">Login as Doctor</button>
+    <button onclick="loginAs('staff')">Login as Staff</button>
+    
+    <h3>Register New</h3>
+    <button onclick="goTo('doctor-dashboard.html')">Add Doctor</button>
+    <button onclick="goTo('staff-dashboard.html')">Add Staff</button>
+    <button onclick="goTo('patient-dashboard.html')">Add Patient</button>
+
+    <!-- Shown only after patient login -->
+    <div id="loggedInActions" style="display: none; margin-top: 20px;">
+      <h3>My Actions</h3>
+      <button onclick="goTo('appointment.html')">Book Appointment</button>
+    </div>
+
+    <!-- Show this section only if logged in as doctor or staff -->
+    <div id="loggedInDoctorStaffActions" style="display: none; margin-top: 20px;">
+      <h3>My Actions</h3>
+      <button onclick="goTo('doctor-dashboard.html')" id="doctorDashboardBtn" style="display: none;">Go to Doctor Dashboard</button>
+      <button onclick="goTo('staff-dashboard.html')" id="staffDashboardBtn" style="display: none;">Go to Staff Dashboard</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="public/scripts/main.js"></script>
+</body>
+</html>

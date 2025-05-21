@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <!-- Add New Doctor Section -->
+    <h2>Add New Doctor</h2>
+    <input type="text" id="doctorName" placeholder="Doctor Name" />
+    <input type="text" id="doctorSpecialization" placeholder="Specialization" />
+    <input type="text" id="doctorUsername" placeholder="Username" />
+    <input type="password" id="doctorPassword" placeholder="Password" />
+    <button onclick="addDoctor()">Add Doctor</button>
+    <ul id="confirmation"></ul>
+
+    <!-- View Appointments Section -->
+    <hr />
+
+    <p><strong>Logged in as:</strong> <span id="loggedInDoctorInfo">Loading...</span></p>
+
+    <h3>Your Appointments</h3>
+    <div id="appointmentsList">
+      <p>Loading appointments...</p>
+    </div>
+
+    <!-- Update Appointment Status Section -->
+    <h3>Update Appointment Status</h3>
+    <input type="number" id="appointmentId" placeholder="Appointment ID" />
+    
+    <select id="statusSelect">
+      <option value="pending">Pending</option>
+      <option value="confirmed">Confirmed</option>
+      <option value="completed">Completed</option>
+    </select>
+
+    <button onclick="updateAppointmentStatus()">Update Status</button>
+    <ul id="statusMessages"></ul>
+  </div>
+
+  <!-- Script -->
+  <script src="../public/scripts/doctor.js"></script>
+</body>
+</html>
